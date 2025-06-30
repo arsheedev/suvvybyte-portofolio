@@ -1,5 +1,9 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	import '../app.css';
 	import logo from '../lib/assets/suvvybyte.png';
+
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <nav class="navbar-fullwidth">
@@ -13,6 +17,8 @@
 		</div>
 	</div>
 </nav>
+
+{@render children()}
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
