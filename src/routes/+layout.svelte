@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import '../app.css';
-	import logo from '../lib/assets/suvvybyte.png';
+	import type { Snippet } from 'svelte'
+	import '../app.css'
+	import logo from '../lib/assets/suvvybyte.png'
 
-	let { children }: { children: Snippet } = $props();
+	let { children }: { children: Snippet } = $props()
 </script>
 
 <nav class="navbar-fullwidth">

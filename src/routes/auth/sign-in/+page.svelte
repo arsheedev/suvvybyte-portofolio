@@ -1,18 +1,18 @@
 <script lang="ts">
-	import * as Form from '$lib/components/ui/form/index.js';
-	import { Input } from '$lib/components/ui/input/index.js';
-	import SignInSchema from '$lib/schemas/sign-in';
-	import { superForm } from 'sveltekit-superforms';
-	import { zodClient } from 'sveltekit-superforms/adapters';
-	import type { ActionData, PageData } from './$types';
+	import * as Form from '$lib/components/ui/form/index.js'
+	import { Input } from '$lib/components/ui/input/index.js'
+	import SignInSchema from '$lib/schemas/sign-in'
+	import { superForm } from 'sveltekit-superforms'
+	import { zodClient } from 'sveltekit-superforms/adapters'
+	import type { ActionData, PageData } from './$types'
 
-	let { data, form }: { data: PageData; form: ActionData } = $props();
+	let { data, form }: { data: PageData; form: ActionData } = $props()
 
 	const formAction = superForm(data.form, {
 		validators: zodClient(SignInSchema)
-	});
+	})
 
-	const { form: formData, enhance } = formAction;
+	const { form: formData, enhance } = formAction
 </script>
 
 <form method="POST" use:enhance>

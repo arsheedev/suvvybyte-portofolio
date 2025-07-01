@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 const ProjectSchema = z.object({
 	id: z.string().min(1, 'Project ID is required!'),
@@ -7,6 +7,6 @@ const ProjectSchema = z.object({
 	clientCode: z.string().min(1, 'Client code is required!'),
 	status: z.enum(['pending', 'wip', 'finished', 'canceled']).default('pending'),
 	image: z.unknown()
-});
+})
 
-export default ProjectSchema;
+export default ProjectSchema
